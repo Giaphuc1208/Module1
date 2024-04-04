@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số khối cơ thể</title>
+</head>
+<body>
+<script>
+    let a= +prompt("Nhập cân nặng :");
+    let b= +prompt("Nhập chiều cao :");
+    let BMI= a/(b*b);
+    if (BMI<18.5){
+        alert('Thiếu cân')
+    } else if (BMI < 25.0 ){
+        alert('Bình thường')
+    } else if (BMI < 30.0){
+        alert('Thừa cân')
+    } else
+        alert('Béo phì')
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5 James</title>
+</head>
+<body>
+<script>
+    let score1= +prompt("Nhập số điểm giữa kì");
+    let score2= +prompt("Nhập số điểm cuối kì");
+    let tongket=(score1*2+score2*8)/10
+    if (tongket>=90){
+        console.log("Học sinh giỏi")
+    } else if (tongket<90 && tongket>=70){
+        console.log("Học sinh khá")
+    } else if (tongket<70 && tongket>=50){
+        console.log("Học sinh trung bình")
+    }else if(tongket<50){
+        console.log("Học sinh yếu")}
+</script>
+</body>
+</html>

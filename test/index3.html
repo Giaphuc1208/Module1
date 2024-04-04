@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    // Viết hàm sumOfListPrime() nhận vào một số nguyên x , hàm trả
+    // về giá trị là tổng các số nguyên tố từ 0 cho tới x.
+
+
+    function ListPrime(num){
+        if (num <= 1){
+            return false;
+        }
+        if (num === 2) {
+            return true;
+        }
+        if (num % 2 === 0){
+            return false;
+        }
+        let number = Math.sqrt(num);
+        for (let i = 3; i <= number ; i += 2) {
+            if (number % i === 0){
+                return false;
+            }
+        }
+        return true;
+    }
+    function sumOfListPrime(x){
+        let sum = 0;
+        for (let i = 0; i <= x ; i++) {
+            if (ListPrime(i)){
+                sum += i;
+            }
+        }
+        return sum;
+    }
+    console.log(sumOfListPrime(7)); // 4 số nguyên tố 2,3,5,7 tổng => 17
+    console.log(sumOfListPrime(1)); // khong có số nguyên tố nào => kết quả là 0
+    console.log(sumOfListPrime(8)); // 2+3+5+7 dừng ở 8, 8 không phải là số nguyên tố => kết quả là 17
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT2NC</title>
+</head>
+<body>
+<!--<button onclick="alert('a+b')">=></button>-->
+<button onclick="tinhTong()">Tính tổng</button>
+
+<script>
+    function tinhTong()
+    {
+        const a = parseFloat(prompt("Nhập số thứ nhất:"));
+        const b = parseFloat(prompt("Nhập số thứ hai:"));
+        const sum = a + b;
+        document.write("Tổng: " + sum + "<br>");
+        alert("Tổng: " + sum);
+        console.log("Tổng:", sum);
+    }
+
+</script>
+
+</body>
+</html>

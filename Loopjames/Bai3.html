@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3,4,5J</title>
+</head>
+<body>
+<script>
+    // let a = 0;
+    // for (let i = 0; i < 8000; i++) {
+    //     console.log(i)
+    //     sum = a + i;
+    //     i = a;
+    //     a = sum;
+    // }
+   /* Bài 3
+    let a= 0;
+    let b= 1;
+    console.log(a);
+    console.log(b);
+    let count=0;
+    for (let i = 0; ; i++) {
+        let fib=a+b;
+        console.log(fib);
+        a=b;
+        b=fib;
+        count++;
+        if(count === 18){
+            break;
+        }
+    }*/
+    /* Bài 4:
+    let a = 0;
+    let b = 1;
+    for (let i = 0; i < 19; i++) {
+        let fib = a + b;
+        a = b;
+        b = fib;
+        if (fib % 5 === 0) {
+            console.log(fib)
+        }
+    }*/
+     // Bài 5
+    let a = 0;
+    let b = 1;
+    let count = 0;
+    let sum = 0;
+    for (let i = 0; ; i++) {
+        let fib = a + b;
+        console.log(fib)
+        sum += fib;
+        a = b;
+        b = fib;
+        count++;
+        if (count === 18){
+            break;
+        }
+    }
+</script>
+</body>
+</html>

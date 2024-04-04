@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6 + 7</title>
+</head>
+<body>
+<!--Bài 6-->
+<!--<script>-->
+<!--    let a=+prompt("Nhập số a:");-->
+<!--    let b=+prompt("Nhập số b:");-->
+<!--    let x=-b/a;-->
+<!--    if (a>0 && b>0){-->
+<!--        console.log("Phương trình có vô số nghiệm")-->
+<!--    } else if (a==0 && b!==0){-->
+<!--        console.log("Phương trình vô nghiệm")-->
+<!--    } else if (a!==0){-->
+<!--        console.log("Phương trình có 1 nghiệm x=" + x)-->
+<!--    }-->
+<!--</script>-->
+<!--bài 7-->
+<script>
+    let a= +prompt("Nhập số a");
+    let b= +prompt("Nhập số b");
+    let c= +prompt("Nhập số c");
+    let delta= b*b-4*a*c;
+    let xk=-b/2*a;
+    let x1=(-b+ Math.sqrt(delta))/2*a;
+    let x2=(-b- Math.sqrt(delta))/2*a;
+    if (delta<0){
+        console.log("Phương trình vô nghiệm")
+    } else if (delta>0){
+        console.log("Phương trình có nghiệm x1=" +x1)
+        console.log("Phương trình có nghiệm x2=" +x2)
+    } else
+        console.log("Phương trình có nghiệm kép x=" +xk)
+</script>
+</body>
+</html>

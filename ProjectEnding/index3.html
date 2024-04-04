@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List with Completion</title>
+    <style>
+        /* CSS cho giao diện */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .todo-item {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: rgb(255, 0, 0);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(255, 0, 115, 0.14);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ec70b3;
+            color: rgba(236, 112, 179, 0.03);
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1 {
+            margin: 0;
+            color: bisque;
+        }
+
+        form {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ff0000;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(236, 112, 179, 0.51);
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            border: cornsilk ;
+            border-collapse: collapse;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>My To Do List</h1>
+</header>
+<form id="todo-form">
+    <input type="text" id="todo-input" placeholder="Enter a new task">
+    <button type="submit">Add</button>
+</form>
+<ul id="todo-list"></ul>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let todoForm = document.getElementById("todo-form");
+        let todoInput = document.getElementById("todo-input");
+        let todoList = document.getElementById("todo-list");
+
+        let todos = [];
+
+        function addTodo(event) {
+            event.preventDefault();
+            const todoText = todoInput.value.trim();
+            if (todoText !== "") {
+                todos.push({ todoText: todoText, completed: false });
+                displayTodos();
+                todoInput.value = "";
+            }
+        }
+
+        function deleteTodo(index) {
+            todos.splice(index, 1);
+            displayTodos();
+        }
+
+        function toggleCompleted(index) {
+            todos[index].completed = !todos[index].completed;
+            displayTodos();
+        }
+
+        function displayTodos() {
+            todoList.innerHTML = "";
+            todos.forEach(function(todo, index) {
+                let li = document.createElement("li");
+                li.classList.add("todo-item");
+                if (todo.completed) {
+                    li.classList.add("completed");
+                }
+
+                let todoText = document.createElement("span");
+                todoText.textContent = todo.todoText;
+
+                let deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.addEventListener("click", function() {
+                    deleteTodo(index);
+                });
+
+                let completeButton = document.createElement("button");
+                completeButton.textContent = todo.completed ? "Undo" : "Complete";
+                completeButton.addEventListener("click", function() {
+                    toggleCompleted(index);
+                });
+
+                li.appendChild(todoText);
+                li.appendChild(deleteButton);
+                li.appendChild(completeButton);
+                todoList.appendChild(li);
+            });
+        }
+
+        todoForm.addEventListener("submit", addTodo);
+        displayTodos();
+    });
+</script>
+</body>
+</html>

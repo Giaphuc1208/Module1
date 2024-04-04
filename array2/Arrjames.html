@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập James</title>
+</head>
+<body>
+<script>
+    // Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,
+    // in ra các phần tử trong mảng.
+    /*let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    for (let i = 0; i < a.length; i++) {
+        console.log("row" + i);
+        for (let j = 0; j < a[i].length; j++) {
+            console.log(a[i][j]);
+        }
+    }*/
+
+
+    // Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    /* C1: Tham khảo James
+    let b = ['2', '1', 'c', 'u', 'h', 'p'];
+    let first = 0;
+    let last = b.length - 1;
+    while (first < last){
+        let a = b[first];
+        b[first] = b[last];
+        b[last] = a;
+        first++;
+        last--;
+    }
+    console.log(b)
+    C2:...
+    let b = ['2', '1', 'c', 'u', 'h', 'p'];
+    let c=[];
+    for (let i = b.length - 1; i >=0; i--) {
+        c.push(b[i])
+    }
+    console.log(b);
+    console.log(c.join('');*/
+
+
+    // Bài 3:Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+    // Chương trình này đếm số ký tự số trong mảng.
+    /*let arr = [];
+    let count=0;
+    for (let i = 1; i <= 6 ; i++) {
+        let a= prompt("Put a data: ");
+        arr.push(a)
+        if ( a % 1 === 0)
+            count++
+    // for (let i = 0; i < arr.length; i++) {
+        // if ( isNaN(arr[i]) === true){
+        //     count++
+        // }
+    }
+    console.log(arr);
+    console.log(arr.length);
+    console.log(count);*/
+
+
+    // Bài 4: Viết một chương trình để đếm số từ trong một chuỗi:
+    /* Cách 1:
+    let str = "hoi hoi ham dn 123";
+    let count=0;
+    let arr=str.split(" ");
+    console.log(arr);
+    for (let i = 0; i < arr.length ; i++) {
+        if ( arr[i] !== ""){
+            count++
+        }
+    }
+    console.log(count);*/
+
+    /*Cách 2
+    let arr = "Viết một chương trình để đếm số từ trong một chuỗi";
+    arr= arr.trim();
+    let count = 1;
+    for (let i = 0; i < arr.length ; i++){
+        if (arr[i] === " " && arr[i+1] !== " "){
+            count++
+        }
+    }
+    console.log(count);  Review*/
+
+    // Bài 5: Viết một chương trình nhập vào 2 chuỗi,
+    // sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+    /*
+    let str1 = str1.trim();
+    let str2 = str2.trim();
+    for (let i = 0; i < str1.length; i++) {
+        for (let j = 0; j < str2.length; j++) {
+            if (str1 === str2 && str1.length === str2.length){
+
+            }
+        }
+    }*/
+
+    /* Bài 6:Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là
+    (-) và thay thế các ký tự này bởi ký tự ( _ ) */
+    let str = prompt("enter string");
+    let arr = str.split('');
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] === '-'){
+            arr[i] = '_'
+        }
+    }
+    console.log(arr)
+
+
+
+
+
+
+</script>
+</body>
+</html>

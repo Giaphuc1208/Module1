@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkString(str1, str2){
+        let a = str1.length;
+        b = str2.length;
+        for (let i = 0; i <= b - a ; i++) {
+            let test = true;
+            for (let j = 0; j < a; j++) {
+                if (str2[i+j] !== str1[j]){
+                    test = false;
+                    break;
+                }
+            }
+            if (test){
+                return true;
+            }
+                }
+                return false;
+    }
+    let str1 = prompt("Enter first string: ");
+    let str2 = prompt("Enter first string: ");
+    let result = checkString(str1, str2);
+    console.log("Your result : " + result)
+
+
+</script>
+</body>
+</html>

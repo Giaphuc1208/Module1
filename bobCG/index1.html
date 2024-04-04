@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bob1</title>
+</head>
+<body>
+
+<script>
+    // Bob 1: Get even 1000
+    // Viết một hàm tính tổng tất cả các số chẵn từ 1 đến 1000.
+    // Gợi ý: Bạn có thể dùng toán tử lấy số dư (%) trong bài tập này.
+
+    // function sum_even_numbers() {
+    //     let sum = 0;
+    //     //your code here
+    //     for (let i = 1; i <= 1000 ; i++) {
+    //         if(i % 2 == 0){
+    //             sum = sum + i;
+    //     }
+    //     }
+    //     return sum;
+    // }
+    // console.log(sum_even_numbers())
+
+    // Bob 2: Iterate an array
+    // Viết một hàm trả về tổng của tất cả các giá trị trong một mảng.
+    // (Ví dụ: [1,2,5] trả về 8, [-5,2,5,12] trả về 14).
+
+    /*function sum_even_numbers(){
+        let sum = 0;
+        //your code here
+        for (let i = 1; i <= 1000; i++){
+            if (i % 2 === 0){
+                sum += i
+            }
+        }
+        return sum;
+    }*/
+
+    /* Bob 3:Sum odd 5000
+    Viết một hàm trả về tổng của tất cả các số lẻ từ 1 đến 5000.
+    (ví dụ 1 + 3 + 5 + ... + 4997 + 4999)
+
+    function sum_odd_5000() {
+    let sum = 0;
+    //Your code here
+    for (let i = 1; i < 5000; i++){
+        if(i%2 !== 0){
+            sum += i;
+        }
+    }
+    return sum;
+    }*/
+
+    /* Bob 4: Find max
+    Cho một mảng với nhiều giá trị, viết một hàm trả về số lớn nhất trong mảng.
+    (Ví dụ: các [-3,3,5,7] tối đa là 7)
+
+    function findMax(arr) {
+     let max = arr[0];
+     for (let i = 1; i <= arr.length-1; i++)
+         if(arr[i]>max){
+            max = arr[i]
+           }
+          return max;
+           }
+             */
+
+    /* Bob 5: Find average
+    Cho một mảng có nhiều phần tử là các chữ số, viết một hàm trả về giá trị trung bình trong mảng.
+    (Ví dụ: mảng [1,3,5,7,20] có giá trị trung bình là 7.2)
+
+    function findAvg(arr) {
+    let avg = 0;
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        sum += arr[i];
+        avg = sum / arr.length;
+    }
+    return avg;
+     */
+
+    /* Bob 6 : Array odd
+    Viết một hàm trả về một mảng gồm các phần từ là các số lẻ từ 1 đến 50.
+    Ví dụ. [1,3,5, ...., 47,49].
+    Gợi ý: Sử dụng hàm push().
+
+    function oddNumbers() {
+    let arr = [];
+    for (let i = 1; i < 50; i+=2){
+        arr.push(i)
+    }
+    //your code here
+    return arr;
+    }*/
+
+    /* Bob 7: Greater than Y
+    Viết một hàm, truyền vào hai tham số, tham số đầu là một mảng các số nguyên, tham số thứ hai là một số nguyên,
+    Ví dụ tham số thứ nhất arr = [1, 3, 5, 7], tham số thứ 2 Y = 3, hàm sẽ trả về giá trị là 2.
+    Vì có hai số nguyên trong mảng lớn hơn 3 là 5 và 7.
+
+    function greaterY(arr, Y) {
+    let count = 0;
+    for (let i = 0; i< arr.length; i++){
+        if(arr[i] > Y){
+            count++
+        }
+    }
+    return count;
+    }
+    */
+
+    /* Bob 8: Squares
+    Cho một mảng với nhiều phần tử, hãy viết một hàm để thay thế mỗi phần tử
+    trong mảng bằng một phần tử có giá trị bằng bình phương của giá trị ban đầu.
+    (Ví dụ: [1,5,10, -2] sẽ trở thành [1,25,100,4])
+
+    function squareVal(arr) {
+    for (let i=0; i<arr.length; i++){
+        arr[i] *= arr[i]
+    }
+    return arr;
+    }
+    */
+
+    /* Bob 9: Negatives
+    Cho một mảng nhiều phần tử, hãy viết một hàm có chức năng thay thế các phần tử có giá trị âm (nhỏ hơn 0)
+    trong mảng bằng môt phần tử có giá trị bằng 0.
+    Khi chương trình được thực hiện, mảng sẽ không còn phần tử có giá trị âm.
+    (Ví dụ: [1,5,10, -2] sẽ trở thành [1,5,10,0])
+
+    function noNeg(arr) {
+    for (let i=0; i < arr.length; i++){
+        if(arr[i] < 0){
+            arr[i] = 0
+        }
+    }
+    return arr;
+    }
+     */
+
+    /* Bob 10: Max/Min/Avg
+    Cho một mảng với nhiều phần tử, viết một hàm trả về một mảng mới mà chỉ 3 phần tử có các giá trị :
+    lớn nhất, nhỏ nhất, giá trị trung bình của mảng ban đầu.
+    (Ví dụ: [1,5,10, -2] sẽ trả về [10, -2,3.5]).
+
+    function maxMinAvg(arr) {
+    let arrnew = [];
+    let max = arr[0];
+    let min = arr[0];
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > max){
+            max = arr[i];
+        }
+        if (arr[i]< min){
+            min = arr[i];
+        }
+         sum += arr[i];
+    }
+    arrnew.push(max);
+    arrnew.push(min);
+    let avg = sum / arr.length;
+    arrnew.push(avg)
+    return arrnew;
+    }
+     */
+
+    /* Bob 11: Swap values
+    Viết một hàm có chức năng hoán đổi phần tử đầu tiên và cuối cùng của mảng.
+    Chiều dài tối thiểu mặc định của mảng là 2.
+    (ví dụ: [1,5,10, -2] sẽ trở thành [-2,5,10,1]).
+
+    function swap(arr) {
+    //your code here
+    let temp = 0;
+     temp = arr[0]
+     arr[0] = arr[arr.length-1]
+     arr[arr.length-1] = temp
+    return arr;
+    }
+    */
+
+    /* Bob 12: Number to string
+    Viết một hàm có chức năng thay thế các phần tử có giá trị âm trong mảng với chuỗi 'Dojo'.
+    Ví dụ nếu mảng = [-1, -3,2], hàm của bạn sẽ trả lại [ 'Dojo', 'Dojo', 2].
+
+    function numToStr(arr) {
+    //your code here
+    for (let i = 0; i<arr.length; i++){
+        if (arr[i] < 0){
+            arr[i] = 'Dojo';
+        }
+    }
+    return arr;
+    }
+    */
+
+
+</script>
+</body>
+</html>

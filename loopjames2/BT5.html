@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lãi suất ngân hàng</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Số tiền ban đầu :");
+    let b = +prompt("Thời gian cho vay :");
+    let c = +prompt("Lãi suất hàng tháng(%):");
+    let d;
+    for (let thang = 0; thang <= b; thang++) {
+        d =1+c/100;
+    }
+    let lai= d*a-a ;
+    console.log('Số tiền ban đầu'+a);
+    console.log('Thời gian cho vay'+b);
+    console.log('Lãi suất hàng tháng' + c + '%');
+    console.log('Tiền lãi sau'+ lai)
+
+
+
+</script>
+</body>
+</html>
+
